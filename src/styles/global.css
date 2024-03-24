@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'Cursivetitle';
+    src: url(/fonts/customfont.otf) format("opentype");
+    font-size: large;
+    
+  }
