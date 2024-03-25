@@ -1,11 +1,13 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import resume from '../resume.pdf'
+import SeoHead from "../components/seoHead"
 
 const IndexPage = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
-      <div className="text-6xl font-cursivetitle mb-8">
+      <div className="text-7xl sm:text-8xl md:text-9xl lg:text-9xl font-cursivetitle mb-8">
         Awais Isane
       </div>
       <div className="flex justify-center items-center mt-5 flex-wrap">
@@ -34,7 +36,7 @@ const IndexPage = () => {
           <span className="text-sm mt-2">Email</span>
         </div>
         <div className="flex flex-col items-center mx-4">
-          <a href="../images/resume.pdf" download='../images/resume.pdf' className="border-none">
+          <a href={resume} download className="border-none">
             <StaticImage src="../images/resume.png" alt="Download CV Icon" className="w-12 h-12" />
           </a>
           <span className="text-sm mt-2">Resume</span>
@@ -47,4 +49,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <SeoHead title=""></SeoHead>
